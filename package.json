@@ -1,0 +1,19 @@
+{
+  "name": "testting",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/trunganhwork/nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trunganhwork/nodejs/issues"
+  },
+  "homepage": "https://github.com/trunganhwork/nodejs#readme"
+}

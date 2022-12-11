@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/trunganhwork/nodejs/issues"
   },
-  "homepage": "https://github.com/trunganhwork/nodejs#readme"
+  "homepage": "https://github.com/trunganhwork/nodejs#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }

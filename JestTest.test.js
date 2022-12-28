@@ -65,3 +65,35 @@ test('Throw Type Error' , () => {
 	}
 	expect(f).toThrow();
 })
+
+test('The data is peanut butter', done => {
+	function calback(data){
+		try{
+			expect(data).toBe('peanut butter');
+			done();
+		} catch(error){
+			done(error);
+		}
+	}
+	fetchData(callback);
+});
+
+test('The data is peanut butters', () => {
+	fetchData().then(data => {
+		expect(data).toBe('peanut butters');
+	});
+});
+
+test('the data is peanut butter', async () => {
+	const data = await fetchData();
+	expect(data).toBe('peanut butter');
+});
+
+test('the test fail with an error', async () => {
+	expect.assertion(1);
+	try {
+		await fetchData();
+	} catch(e) {
+		expect(e).toMatch('error');
+	}
+});

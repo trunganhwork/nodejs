@@ -1,4 +1,6 @@
 
 
-
+Promise Async Await
 resolve reject, function state argument promise wrap return
+async funtion always returns a promise
+always pass a function to then(), other values are ignored

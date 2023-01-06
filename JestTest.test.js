@@ -66,6 +66,9 @@ test('Throw Type Error' , () => {
 	expect(f).toThrow();
 })
 
+function fetchData(){
+	return Promise.resolve('peanut butters')
+}
 test('The data is peanut butter', done => {
 	function calback(data){
 		try{
@@ -90,7 +93,7 @@ test('the data is peanut butter', async () => {
 });
 
 test('the test fail with an error', async () => {
-	expect.assertion(1);
+	expect.assertions(1);
 	try {
 		await fetchData();
 	} catch(e) {
@@ -100,7 +103,7 @@ test('the test fail with an error', async () => {
 
 test('the data is peanut butter', async () => {
 	await expect(fetchData()).resolves.toBe('peanut butter');
-});
+});	
 test('the data is peanut butter', async () => {
 	await expect(fetchData()).rejects.toMatch('error');
 })

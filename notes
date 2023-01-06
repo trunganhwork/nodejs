@@ -5,3 +5,7 @@ resolve reject, function state argument promise wrap return
 async funtion always returns a promise
 always pass a function to then(), other values are ignored
 await pause the big function until await is done
+
+
+.json() is asynchronous and return Promise resolve to a Javascript object
+JSON.parse(text,[reviver,]) is synchronous and parse the string

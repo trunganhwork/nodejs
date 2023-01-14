@@ -67,10 +67,13 @@ test('Throw Type Error' , () => {
 })
 
 function fetchData(){
-	return Promise.resolve('peanut butters')
+	return Promise.resolve('peanut butters');
+}
+function fetchDatacallback(cb){
+	return true;
 }
 test('The data is peanut butter', done => {
-	function calback(data){
+	function callback(data){
 		try{
 			expect(data).toBe('peanut butter');
 			done();
@@ -78,7 +81,7 @@ test('The data is peanut butter', done => {
 			done(error);
 		}
 	}
-	fetchData(callback);
+	fetchDatacallback(callback);
 });
 
 test('The data is peanut butters', () => {
@@ -106,4 +109,11 @@ test('the data is peanut butter', async () => {
 });	
 test('the data is peanut butter', async () => {
 	await expect(fetchData()).rejects.toMatch('error');
+})
+
+console.log('Be sure to return or await the promise, if omitted the test will complete before the promise returned')
+
+test('the test fails with an error', () => {
+	expect.assertions(1);
+	return fetchData().catch(e => expect(e).toMatch('error'));
 })
